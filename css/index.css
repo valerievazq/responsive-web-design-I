@@ -1,4 +1,4 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* Use your own code or past solution for Great Idea Web Page CSS here!
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -67,39 +67,42 @@ h1, h2, h3, h4, h5 {
 
 /* Your code starts here! */
 
-/* NAVIGATION */
+/* NAVIGATION / HEADER */
 
-nav{
-    display: inline-block;
-    margin-bottom: 100px;
-    background-color: greenyellow;
-    padding: 10px 5px 10px 100px;
-    width: 100%;
-    font-weight: bolder;
-    overflow: hidden;
-    position: sticky;
+header, nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+nav {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav a:hover {
     color: blueviolet;
-    padding: 5px;
-    
 }
 
 nav a {
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
     color: black;
-    margin-right: 60px;
     font-size: 20px
 }
 
-/* HEADER*/
+/***************/
+
+
+/* INTRO*/
 
 
 #intro {
     display: flex;
     justify-content: center;
+    margin: 75px;
 }
 
 #intro h1 {
@@ -108,37 +111,61 @@ nav a {
     align-content: center;
     font-size: 75px;
     text-align: center;
-    margin: 50px 30px 0 0;
+    margin: 50px 75px;
+    width: 100%;
+    height: auto;
 }
 
 #intro button {
-    text-align: center;
-    margin-top: 20px;
-    padding: 5px 25px;
+    display: flex;
+    align-content: center;
+    margin: 20px 0 20px 145px;
+    padding: 10px 40px;
     border: 1px solid black;
     border-radius: 5%;
-
+    background: white;
+    font-size: large;
 }
+
+
+
+/***************/
+
+
 /* FIRST SECTION */
 
 #top-part {
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: 120px;
 }
 
 .two-col{
-    width: 38%;
-    margin: 15px 10px;}
+    width: 100%;
+    font-size: 20px;
+    }
     
 
 hr {
-    width: 78%;
+    width: 77%;
 }
 
+/**************/
+
+
+
+/* CENTER IMAGE */
+
 .middle-img {
-    margin-left: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+/**************/
+
+
 
 
 /* SECOND SECTION */
@@ -147,24 +174,34 @@ hr {
     display: flex;
     justify-content: center;
     align-content: center;
-    margin: 45px;
+    margin: 120px;
 }
 
 .three-col{
-    width: 27%;
+    width: 100%;
     margin: 10px;
+    font-size: 20px;
 }
+
+/**************/
+
+
+
 
 /* CONTACT */
 
 .contact {
-    margin-left: 120px;
+    margin-left: 14.5%;
     margin-top: 25px;
 }
 
 .contact p {
     margin-top: 10px;
 }
+/*************/
+
+
+
 
 /* FOOTER */
 
@@ -172,3 +209,39 @@ footer {
     text-align: center;
     margin-bottom: 20px;
 }
+
+
+/********** MEDIA QUERIES *************/
+
+@media (max-width: 700px) {
+  
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 20px;
+        background-color: lightgray;
+        width: 100%;
+    }
+    nav a {
+      margin: 10px 0px;
+      font-size: 26px;
+    }
+  } 
+
+  @media (max-width: 700px) {
+    div #intro h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    }
+  }
+
+  @media (max-width: 700px) {
+    #intro img {
+        display: none;
+    }
+  }
