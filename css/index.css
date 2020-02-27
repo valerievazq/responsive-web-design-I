@@ -1,3 +1,8 @@
+Use your own code or past solution for Great Idea Web Page CSS here!
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -59,126 +64,128 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-.container {
-  width: 880px;
-  /* TB LR */
-  margin: 0 auto;
+/* Your code starts here! */
+
+body {
+  margin: 0 10%;
 }
 
-/* header */
-
-header nav {
-  display: inline-block;
-  width: 691px;
-  vertical-align: top;
-  margin-top: 35px;
+header, nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header nav a {
-  margin-right: 65px;
-  font-size: 14px;
-  color: gray;
+nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a:hover {
+  color: blueviolet;
+}
+
+nav a {
+  display: flex;
+  justify-content: space-between;
   text-decoration: none;
+  color: black;
+  font-size: 20px
 }
 
-header nav a:hover {
-  text-decoration: underline;
+#intro {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
 }
 
-header nav a:first-child {
-  margin-left: 0;
-}
-
-header nav a:last-child {
-  margin-right: 0;
-}
-
-header .logo {
-  margin-top: 25px;
-}
-
-/* cta */
-
-.cta .cta-text {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 77px;
-  margin-top: 120px;
+#intro h1 {
+  font-size: 75px;
   text-align: center;
-  padding: 0px 75px;
 }
 
-.cta .cta-text button {
-  background: white;
-  vertical-align: top;
-  margin-top: 6px;
-  padding: 8px 44px;
-  font-size: 17px;
+#intro button {
+  display: flex;
+  margin-left: 50px;
+  padding: 10px 40px;
   border: 1px solid black;
-  cursor: pointer;
+  border-radius: 5%;
+  background: white;
+  font-size: large;
 }
 
-.cta .cta-text button:hover {
-  background: black;
-  color: white;
+#top-part {
+  display: flex;
+  justify-content: center;
+
 }
 
-.cta img {
-  display: inline-block;
-  margin-top: 69px;
+.middle-img  {
+  
+  width: 100%;
+  margin: 0;
 }
 
-.main-content {
-  border-top: 1px solid black;
-  margin-top: 76px;
-  padding-top: 39px;
+
+#bottom-part {
+  display: flex;
 }
 
-.main-content .top-content {
-  padding: 0 10px;
+
+@media (max-width: 600px) {
+  
+  header nav {
+    flex-direction: column;
+    width: 75%;
+    margin: 25px;
+  }
+
+  header img {
+    order: -6;
+  }
+
+  header nav a {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin: 10px;
+    padding-bottom: 20px;
+   justify-content: center;
+   align-items: center;
+  }
 }
 
-.main-content .top-content .text-content {
-  width: 410px;
-  display: inline-block;
-  margin-right: 34px;
+@media (max-width: 600px) {
+#intro {
+  flex-direction: column;
+  margin: 0;
 }
 
-.main-content .top-content .text-content:last-child {
-  margin-right: 0;
+  #intro img {
+    display: none;
+  }
+
+  #intro button {
+    margin-left: 175px;
+  }
 }
 
-.main-content .middle-img {
-  margin-top: 45px;
+@media screen and (max-width: 800px) {
+  #top-part {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  #bottom-part {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-.main-content .bottom-content {
-  margin-top: 37px;
-  padding: 0 10px;
-}
-
-.main-content .bottom-content .text-content {
-  width: 275px;
-  display: inline-block;
-  margin-right: 12px;
-}
-
-.main-content .bottom-content .text-content:last-child {
-  margin-right: 0;
-}
-
-.contact {
-  margin-top: 57px;
-  border-top: 1px solid black;
-  padding: 39px 10px 0;
-}
-
-.contact p {
-  margin: 20px 0;
-}
-
-footer {
-  margin: 32px 0;
-  text-align: center;
-  font-size: 14px;
+@media (max-width: 600px) {
+  .middle-img {
+    width: 100%;
+  }
 }
