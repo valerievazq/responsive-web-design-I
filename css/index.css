@@ -1,9 +1,3 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here!
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,183 +59,126 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Your code starts here! */
-
-/* NAVIGATION / HEADER */
-
-header, nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-nav {
-    width: 90%;
-    display: flex;
-    justify-content: space-around;
+.container {
+  width: 880px;
+  /* TB LR */
+  margin: 0 auto;
 }
 
-nav a:hover {
-    color: blueviolet;
+/* header */
+
+header nav {
+  display: inline-block;
+  width: 691px;
+  vertical-align: top;
+  margin-top: 35px;
 }
 
-nav a {
-    display: flex;
-    justify-content: space-between;
-    text-decoration: none;
-    color: black;
-    font-size: 20px
+header nav a {
+  margin-right: 65px;
+  font-size: 14px;
+  color: gray;
+  text-decoration: none;
 }
 
-/***************/
-
-
-/* INTRO*/
-
-
-#intro {
-    display: flex;
-    justify-content: center;
-    margin: 75px;
+header nav a:hover {
+  text-decoration: underline;
 }
 
-#intro h1 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 75px;
-    text-align: center;
-    margin: 50px 75px;
-    width: 100%;
-    height: auto;
+header nav a:first-child {
+  margin-left: 0;
 }
 
-#intro button {
-    display: flex;
-    align-content: center;
-    margin: 20px 0 20px 145px;
-    padding: 10px 40px;
-    border: 1px solid black;
-    border-radius: 5%;
-    background: white;
-    font-size: large;
+header nav a:last-child {
+  margin-right: 0;
 }
 
-
-
-/***************/
-
-
-/* FIRST SECTION */
-
-#top-part {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 120px;
+header .logo {
+  margin-top: 25px;
 }
 
-.two-col{
-    width: 100%;
-    font-size: 20px;
-    }
-    
+/* cta */
 
-hr {
-    width: 77%;
+.cta .cta-text {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 77px;
+  margin-top: 120px;
+  text-align: center;
+  padding: 0px 75px;
 }
 
-/**************/
-
-
-
-/* CENTER IMAGE */
-
-.middle-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cta .cta-text button {
+  background: white;
+  vertical-align: top;
+  margin-top: 6px;
+  padding: 8px 44px;
+  font-size: 17px;
+  border: 1px solid black;
+  cursor: pointer;
 }
 
-/**************/
-
-
-
-
-/* SECOND SECTION */
-
-#bottom-part {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin: 120px;
+.cta .cta-text button:hover {
+  background: black;
+  color: white;
 }
 
-.three-col{
-    width: 100%;
-    margin: 10px;
-    font-size: 20px;
+.cta img {
+  display: inline-block;
+  margin-top: 69px;
 }
 
-/**************/
+.main-content {
+  border-top: 1px solid black;
+  margin-top: 76px;
+  padding-top: 39px;
+}
 
+.main-content .top-content {
+  padding: 0 10px;
+}
 
+.main-content .top-content .text-content {
+  width: 410px;
+  display: inline-block;
+  margin-right: 34px;
+}
 
+.main-content .top-content .text-content:last-child {
+  margin-right: 0;
+}
 
-/* CONTACT */
+.main-content .middle-img {
+  margin-top: 45px;
+}
+
+.main-content .bottom-content {
+  margin-top: 37px;
+  padding: 0 10px;
+}
+
+.main-content .bottom-content .text-content {
+  width: 275px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.main-content .bottom-content .text-content:last-child {
+  margin-right: 0;
+}
 
 .contact {
-    margin-left: 14.5%;
-    margin-top: 25px;
+  margin-top: 57px;
+  border-top: 1px solid black;
+  padding: 39px 10px 0;
 }
 
 .contact p {
-    margin-top: 10px;
+  margin: 20px 0;
 }
-/*************/
-
-
-
-
-/* FOOTER */
 
 footer {
-    text-align: center;
-    margin-bottom: 20px;
+  margin: 32px 0;
+  text-align: center;
+  font-size: 14px;
 }
-
-
-/********** MEDIA QUERIES *************/
-
-@media (max-width: 700px) {
-  
-    header nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 20px;
-        background-color: lightgray;
-        width: 100%;
-    }
-    nav a {
-      margin: 10px 0px;
-      font-size: 26px;
-    }
-  } 
-
-  @media (max-width: 700px) {
-    div #intro h1 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-    }
-  }
-
-  @media (max-width: 700px) {
-    #intro img {
-        display: none;
-    }
-  }
