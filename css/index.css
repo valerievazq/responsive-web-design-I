@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5 {
 /* Your code starts here! */
 
 body {
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 header, nav {
@@ -133,59 +133,86 @@ nav a {
 }
 
 
-@media (max-width: 600px) {
-  
-  header nav {
-    flex-direction: column;
-    width: 75%;
-    margin: 25px;
+/****** MEDIA QUERIES *******/
+
+/*TABLET VIEW*/
+
+@media (max-width:1024px) {
+
+  #intro img {
+    display: none
+  } 
+
+  #intro h1 {
+    align-content: center;
+    margin: 0;
+    width:100%;
   }
 
-  header img {
-    order: -6;
+  header {
+    flex-direction: column-reverse;
+    align-content: center;
+    margin-top: 5%;
   }
 
   header nav a {
-    border-bottom: 1px solid black;
-    width: 100%;
-    margin: 10px;
-    padding-bottom: 20px;
-   justify-content: center;
-   align-items: center;
-  }
-}
-
-@media (max-width: 600px) {
-#intro {
-  flex-direction: column;
-  margin: 0;
-}
-
-  #intro img {
-    display: none;
+    margin: 5% ;
   }
 
   #intro button {
-    margin-left: 175px;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
+
+  .two-col {
+    padding: 15px 15px 15px 0;
+  }
+
+  .three-col {
+    padding: 15px 15px 15px 0;
+  }
+
 }
 
-@media screen and (max-width: 800px) {
-  #top-part {
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-  }
+  /***** PHONE VIEW ******/
 
-  #bottom-part {
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-  }
-}
+@media (max-width: 730px) {
+  
+    body {
+      margin: 0 4%;
+      width: 100%;
+    }
 
-@media (max-width: 600px) {
-  .middle-img {
-    width: 100%;
-  }
+    #intro button {
+      margin-left: 65px;
+    }
+
+    header nav {
+      flex-direction: column;
+      margin: 25px;
+    }
+  
+    header img {
+      flex-direction: column-reverse;
+      align-content: center;
+    }
+  
+    header nav a {
+      border-bottom: 1px solid black;
+      width: 100%;
+      margin: 10px;
+      padding-bottom: 20px;
+     justify-content: center;
+     align-items: center;
+    }
+
+    #top-part {
+      flex-direction: column;
+      align-content: center;
+    }
+
+    #bottom-part {
+      flex-direction: column;
+      align-content: center;
+    }
 }
